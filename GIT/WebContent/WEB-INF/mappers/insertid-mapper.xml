@@ -6,7 +6,7 @@
  <mapper namespace="loginInsert">
  
  <insert id="insert" parameterType="java.lang.String">
- 	insert into loginlog values(#{id},sysdate)
+ 	insert into loginlog2 values(#{id},sysdate)
  </insert>
  
 

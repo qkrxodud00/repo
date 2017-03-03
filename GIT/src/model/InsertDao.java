@@ -13,6 +13,7 @@ public class InsertDao {
 	public int InsertID(String id) {
 		SqlSession session = factory.openSession();
 		int num = 0;
+		System.out.println("IsertR"+id);
 		try{
 		num = session.insert("loginInsert.insert", id);
 		session.commit();
