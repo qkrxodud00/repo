@@ -13,19 +13,20 @@ import org.springframework.web.servlet.ModelAndView;
 import model.SearchDao;
 
 @Controller
-@RequestMapping("/search")
+@RequestMapping("/")
 
 public class SearchController {
 	@Autowired
 	SearchDao sDao;
-	@RequestMapping("/list")
+	@RequestMapping("list")
 	public ModelAndView searchList(HttpServletRequest req){
-		String id = req.getParameter("id");
+		String id = "%"+req.getParameter("id")+"%";
 		System.out.println(id);
 		ModelAndView mav = new ModelAndView();
 		List<Map> list = sDao.searchList(id);
 		mav.addObject("list",list);
-		mav.setViewName("/search/list");
+		mav.setViewName("search/list");
+		System.out.println(list.get(0).toString());
 		return mav;
 		
 	}
