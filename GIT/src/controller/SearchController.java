@@ -25,8 +25,8 @@ public class SearchController {
 		ModelAndView mav = new ModelAndView();
 		List<Map> list = sDao.searchList(id);
 		mav.addObject("list",list);
-		mav.setViewName("search/list");
-		System.out.println(list.get(0).toString());
+		mav.setViewName("search/01");
+		
 		return mav;
 		
 	}

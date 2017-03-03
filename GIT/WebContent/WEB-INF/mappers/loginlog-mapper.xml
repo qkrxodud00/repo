@@ -5,7 +5,7 @@
  
  <mapper namespace="loginlog">
  <select id="select" resultType="java.util.HashMap" parameterType="java.lang.String">
- 	select id, count(*) as cnt from loginlog where id like #{id} group by id
+ 	select id, count(*) as cnt from loginlog2 where id like #{id} group by id
  </select>
  <select id="date" resultType="java.util.HashMap" parameterType="java.lang.String">
  </select>
