@@ -29,7 +29,7 @@
 		<bean class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="mapperLocations"> 
 			<list>
-				<value>/WEB-INF/mappers/loginlog-mapper.xml</value>
+				<value>/WEB-INF/mappers/*-mapper.xml</value>
 			</list>
 		</property>
 		<property name="dataSource" ref="datasource"/>
